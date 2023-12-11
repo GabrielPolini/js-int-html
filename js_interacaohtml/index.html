@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script>
+            var n = 0;
+            var valorTotalPedido = 0;
+
+            function contagemCliques() {
+                n++;
+                alert(n);
+            }
+
+            function calcularValorPedido() {
+                var valorItem = 0;
+                valorItem = parseFloat(document.cadastroPedido.valorItem.value);
+                valorTotalPedido += valorItem;
+                console.log("valorTotalPedido: " + valorTotalPedido);
+            }
+
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="contagemCliques()">Clique</button>
+
+        <form name="cadastroPedido" action="#" method="POST">
+            <label>Valor Item:</label>
+            <input type="text" name="valorItem">
+            <button type="button" onclick="calcularValorPedido()">Enviar</button>
+        </form>
+    </body>
+</html>
